@@ -1,0 +1,138 @@
+
+Topics:
+  
+  what if a particular property is specified in all three CSS ways
+  
+  Priority:
+    Default Priority:
+      inline > line of execution ( internal or enternal ( which get executed the last takes over the priority ) ) of styles
+
+  Overwrite the Default:
+    use of important ---> overrride the default priority order.
+    
+  class vs id:
+    id CSS Selector:
+      use #<id-name> to select a specific tag/tags
+      
+      #para-one {
+        color: green;
+      }
+      
+      eg: <p id="para-one" >This is para</p>
+
+      Each Tag should have unique id ( only one id for a tag is possible )
+    
+    Class:
+      use .<class-name> to select a grp of tag
+      
+      .color-green {
+        color: green;
+      }
+      
+      .bg-yellow {
+        background-color: yellow;
+      }
+      
+      eg: <p class="color-green bg-yellow" >This is para</p>
+          <p class="color-green bg-yellow" >This is para Two</p>
+
+      multiple elements can have same class
+    
+    Priorities
+      id & class for same elements
+
+    multiple classes
+      A tag/element can have muliple classes eg: class="class-one bg-green"
+
+    If more than one rule applies to an element and specifies the same property, then CSS gives priority to the rule that has the more specific selector. An ID selector is more specific than a class selector, which in turn is more specific than a tag selector.
+  
+  display property: 
+    inline -> takes only the required width, even if width is specified
+    block -> occupies the entire width of the parent
+    inline-block -> acts like inline, untill the width is specified ( takes the specified width )
+
+  Box Model:
+    wrapping the contents of an element with padding, border, margin
+
+    inside to outside 
+      content ---> padding ---> border ---> margin 
+
+    outside to inside
+      margin ---> border ---> padding ---> content
+    
+    margin:
+      outermost layer of Box Model
+
+    padding:
+      innermost layer near to the content
+
+    border: middle layer
+
+  Parent Inherit:
+    Inheriting the parent CSS properties from child elements/tags
+    eg: border: inherit; // takes parent value if any else default
+  
+  css function:
+    url() --> takes a path for the image or someother
+    linear-gradient() --> 
+    calc() --> calculate the property value from arthimetic operation (-, +)
+    eg: width: calc(100px - 30px) ---> 70px
+        parent entire height is 1000px 
+        height: calc(100% - 50px) ---> 950px
+
+  gradient:
+    linear-gradient --> function which mixes color is the desired percentage
+
+  meta tags:
+    xtra information about the site which helps in seo ( search engine optimization, encoding, browser compatability, viewport management )
+    eg: <meta name="description" content="some description" />
+        <meta name="keywords" content="searchable keywords" /> used of SEO
+
+        <meta charset="utf-8" /> char encoding format
+        <meta http-equiv="utf-8" /> legacy browser 
+        <meta name="viewport" content="width=<value>, initial-scale=1" /> controlling the viewport for the user
+
+Next Session:
+  
+
+  Position
+    static/initial:
+      1. Goes witht the normal flow of the document
+      2. Occupies its own space in the document
+      3. Not affected by top, right, bottom, left values
+      4. Affected by scrolling
+    
+    Relative:
+      1. Goes witht the normal flow of the document
+      2. Occupies its own space in the document
+      3. Affected by top, right, bottom, left values with respect to its postion inside parent
+      4. Affected by scrolling
+
+    Absolute:
+      1. Removed from the normal flow of the document and made to appear float over normal flow
+         of the document
+      2. No Space is occupied in the page layout
+      3. when **no** top, right ... props are specified itstays in 0px top respective 
+         to the parent
+      4. Affected by top, right, bottom, left values with respective to initial 
+          containing block (html tag) ** if provided none of its parents has non 
+          static position value**
+        ** When some of its parents has non static position value then it moves with 
+        respective to the closest positioned parent **
+      5. Affected by scrolling
+    
+    Fixed:
+      1. Removed from the normal flow of the document and made to appear float over normal flow
+         of the document
+      2. No Space is occupied in the page layout
+      3. Affected by top, right, bottom, left values with respective to initial 
+          containing block (html tag)
+      4. Not Affected by scrolling
+
+    Sticky:
+      1. Goes witht the normal flow of the document
+      2. Occupies its own space in the document
+      3. Affected by top, right, bottom, left values with respective to initial 
+          containing block (html tag)
+      4. affected by top, left, ... values untill the values are reached else not 
+         affected by scroll

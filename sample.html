@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta name="description" content="site to discuss about the internal, external, css, box-model, gradient" />
+  <meta name="keyword" content="scm, repo, github, git" />
+  <title>Page Title</title>
+  <!-- Meta tags extra information about the site support SEO so that it can searched over internet -->
+
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+  <meta name='viewport' content='width=1000px, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+  <!-- External Styling - Coming from external css file -->
+  <link rel="stylesheet" href="sample.css" />
+
+  <!-- Internal Styling - using styles in html -->
+  <style>
+    h1 {
+      background-color: aqua;
+      color: red !important;
+    }
+
+    .sample-class {
+      background-color: blue;
+      color: white;
+    }
+
+    /* for styling with id use #<element-id> */
+    #sample-para {
+      background-color: yellow;
+    }
+
+    /* for styling with class use .<element-class> */
+
+
+    .border-px {
+      border: 5px dashed red;
+    }
+
+    .box-model {
+      height: 100px;
+      width: 100px;
+      /* All sides with one value */
+      /* margin: 16px; */
+      /* Individual side values */
+      /* margin-top: 10px;
+      margin-right: 20px;
+      margin-bottom: 30px;
+      margin-left: 40px; */
+      /* One line inidividual values */
+      /* margin: 10px 20px 30px 40px; */
+
+      /* one line: y( vertical ) x( horizontal ) */
+      /* margin: 20px 30px; */
+
+      /* one line: top x(horizontal) bottom */
+      margin: 10px 20px 30px;
+      /* Padding can also be specified as Margin */
+      padding: 10px 20px 30px 40px;
+
+      background-color: blueviolet;
+      /*     width style color    specify sides and all props at once   */
+      /* border: 5px solid palevioletred; */
+
+      border-top: 5px dashed green;
+      border-right: 5px dotted red;
+      border-bottom: 5px dashed green;
+      border-left: 5px dotted red;
+      /* Individual props specification */
+      /* border-top-width: 5px;
+      border-top-style: dotted;
+      border-top-color: green;
+      border-right-width: 5px;
+      border-right-style: dotted;
+      border-right-color: red;
+      border-bottom-width: 5px;
+      border-bottom-style: dashed;
+      border-bottom-color: green;
+      border-left-width: 5px;
+      border-left-style: dotted;
+      border-left-color: red; */
+      /* border-image: url(https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c21hbGx8ZW58MHx8MHx8&w=1000&q=80) 30; */
+      /* border-image-width: 50px;
+      border-image-outset: 1; */
+    }
+
+    .second-div {
+      height: 150px;
+      width: 150px;
+      border-top: 3px solid yellow;
+      border-right: 3px solid green;
+      border-bottom: 3px solid blue;
+      border-left: 3px solid red;
+      padding: 16px;
+    }
+
+    .inner-div {
+      height: 100px;
+      width: 100px;
+      padding: inherit;
+      /* background-color: blueviolet; */
+      background: linear-gradient(to left, yellow, blue 20%, red 20%, green 30%);
+      border: inherit;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Inline Styling -> Specific to Particular Tag -->
+  <h1 style="color: green !important;background-color: blue;">Hello</h1>
+
+  <p class="sample-class" id="sample-para">Some Paragrapah</p>
+
+  <p class="sample-class border-px">Second Paragrapah</p>
+  <p class="sample-class border-px">Third Paragrapah</p>
+
+  <h2 class="sample-class border-px">Heading Two</h2>
+
+  <span>Hi Hello</span>
+  <b style="background-color: goldenrod;">B42WEENG</b>
+
+
+  <div class="box-model">
+
+  </div>
+
+  <div class="second-div">
+    <div class="inner-div">
+
+    </div>
+  </div>
+
+</body>
+
+</html>
