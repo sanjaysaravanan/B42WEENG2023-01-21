@@ -39,12 +39,13 @@ Topics:
       multiple elements can have same class
     
     Priorities
-      id & class for same elements
+      id & class 
+      If more than one rule applies to an element and specifies the same property, then CSS gives priority to the rule that has the more specific selector. An ID selector is more specific than a class selector, which in turn is more specific than a tag selector.
 
     multiple classes
       A tag/element can have muliple classes eg: class="class-one bg-green"
 
-    If more than one rule applies to an element and specifies the same property, then CSS gives priority to the rule that has the more specific selector. An ID selector is more specific than a class selector, which in turn is more specific than a tag selector.
+    
   
   display property: 
     inline -> takes only the required width, even if width is specified
